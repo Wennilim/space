@@ -1,0 +1,22 @@
+---
+import Image from "astro/components/Image.astro";
+---
+
+<header class="flex justify-between items-center w-full pl-4 py-4">
+  <!-- Logo Section -->
+  <div class="ml-8">
+    <Image src="/src/assets/logo.png" width={48} height={48} alt="logo" />
+  </div>
+
+  <!-- Horizontal line between logo and nav -->
+  <div class="absolute left-4 hidden lg:flex lg:border-t-[1px] lg:border-gray-500 lg:opacity-50 lg:mx-[150px] w-[calc(100%-300px)]" />
+
+  <!-- Navigation Links -->
+  <nav class="bg-[rgba(255,255,255,0.05)] backdrop-blur-md px-16 py-8 hidden lg:flex gap-8 text-white uppercase tracking-widest">
+    {['Home', 'Destination', 'Crew', 'Technology'].map((item, index) => (
+      <a href={`/${item.toLowerCase()}`} class="relative hover:opacity-100 opacity-70 transition-opacity">
+        <span class="mr-2 font-bold">{String(index).padStart(2, '0')}</span>{item}
+      </a>
+    ))}
+  </nav>
+</header>

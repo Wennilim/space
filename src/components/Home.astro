@@ -1,0 +1,27 @@
+---
+import Header from "./Header.astro";
+---
+
+
+<section id="home" class="h-screen bg-cover bg-center bg-[url('/src/assets/bg-01.png')]">
+    <Header/>
+    <div class="flex flex-col gap-[80px] justify-center lg:flex-row lg:justify-between items-center lg:px-[168px] lg:py-[128px]"> 
+<div class="flex flex-col items-center lg:items-start h-full text-white text-start max-w-[540px]">
+    <h3 class="text-[16px] md:text-[18px] lg:text-[28px] font-thin text-white uppercase">
+       so, you want to travel to
+    </h3>
+    <h1 class="text-[56px] md:text-[80px] lg:text-[144px] text-white uppercase">SPACE</h1>
+    <p class="px-3 text-center lg:text-start text-[18px]/[32px] font-barlow">Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
+</div>
+<div class="relative w-[144px] h-[144px] md:w-[176px] md:h-[176px]  lg:w-[272px] lg:h-[272px] group cursor-pointer">
+    <!-- Larger circle, hidden by default, appears on hover -->
+    <div class="w-[200px] h-[200px] md:w-[276px] md:h-[276px] lg:w-[450px] lg:h-[450px] bg-white rounded-full opacity-0 group-hover:opacity-15 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 transition-opacity ease-in duration-500" />
+  
+    <!-- Smaller circle -->
+    <div class="w-[144px] h-[144px] md:w-[176px] md:h-[176px] lg:w-[272px] lg:h-[272px] bg-white rounded-full relative z-10 flex items-center justify-center">
+      <span class="uppercase text-[16px] md:text-[24px] lg:text-[32px]">explore</span>
+    </div>
+  </div>
+  
+</div>
+</section>
